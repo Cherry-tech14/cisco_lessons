@@ -21,7 +21,7 @@ def message(number):
 number = 1234
 message(1)
 print(number)
-'''
+
 
 def message(what, number):
     print("Enter", what, "number", number)
@@ -39,4 +39,26 @@ introduction("Jesse", "Quick")
 introduction("Clark", "Kent")
 
 
+# Keyword argument passing
+def introduction(first_name, last_name):
+    print("Hello, my name is", first_name, last_name)
+introduction(first_name = "James", last_name = "Bond")
+introduction(last_name = "Skywalker", first_name = "Luke")
 
+
+# returning a result from a function: using return keyword
+def boring_function():
+    return 123
+
+x = boring_function()
+
+print(x)
+
+def boring_function():
+    print("'Boredom Mode' ON.")
+    return 123
+
+print("This lesson is interesting!")
+boring_function()
+print("This lesson is boring...")
+'''

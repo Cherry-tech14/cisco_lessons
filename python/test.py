@@ -56,7 +56,7 @@ my_list_2 = []
 for v in my_list_1:
     my_list_2.insert(0, v)
 print(my_list_2)
-'''
+
 my_list = [1, 2, 3]
 for v in range(len(my_list)):
     my_list.insert(1, my_list[v])
@@ -72,7 +72,113 @@ my_list = [[0, 1, 2, 3] for i in range(2)]
 print(my_list[2][0])
 
 
+def f(x):
+    if x == 0:
+        return 0
+    return x + f(x - 1)
 
+
+print(f(3))
+
+def fun(x):
+    x += 1
+    return x
+
+
+x = 2
+x = fun(x + 1)
+print(x)
+
+
+dictionary = {}
+my_list = ['a', 'b', 'c', 'd']
+
+for i in range(len(my_list) - 1):
+    dictionary[my_list[i]] = (my_list[i], )
+
+for i in sorted(dictionary.keys()):
+    k = dictionary[i]
+    print(k)
+    
+def func_1(a):
+    return a ** a
+
+
+def func_2(a):
+    return func_1(a) * func_1(a)
+
+
+print(func_2(2))
+
+
+try:
+    value = input("Enter a value: ")
+    print(value/value)
+except ValueError:
+    print("Bad input...")
+except ZeroDivisionError:
+    print("Very bad input...")
+except TypeError:
+    print("Very very bad input...")
+except:
+    print("Booo!")
+    
+my_list = [1, 2]
+
+for v in range(2):
+    my_list.insert(-1, my_list[v])
+
+print(my_list)
+
+print("a", "b", "c", sep="sep")
+
+x = 1 // 5 + 1 / 5
+print(x)
+
+dct = {'one': 'two', 'three': 'one', 'two': 'three'}
+v = dct['three']
+
+for k in range(len(dct)):
+    v = dct[v]
+
+print(v)
+
+def fun(x, y):
+    if x == y:
+        return x
+    else:
+        return fun(x, y-1)
+
+print(fun(0, 3))
+
+
+tup = (1, 2, 4, 8)
+tup = tup[-2:-1]
+tup = tup[-1]
+print(tup)
+
+dct = {}
+dct['1'] = (1, 2)
+dct['2'] = (2, 1)
+
+for x in dct.keys():
+    print(dct[x][1], end="")
+
+
+def fun(inp=2, out=3):
+    return inp * out
+
+
+print(fun(out=2))
+
+lst = [[x for x in range(3)] for y in range(3)]
+
+for r in range(3):
+    for c in range(3):
+        if lst[r][c] % 2 != 0:
+            print("#")
+
+'''
 
 
 
